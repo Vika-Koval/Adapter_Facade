@@ -1,10 +1,10 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ucu.edu.ua.task1.Facebookuser;
+import ucu.edu.ua.task1.FacebookUser;
 import ucu.edu.ua.task1.Facebookuseradapter;
-import ucu.edu.ua.task1.Messagesender;
-import ucu.edu.ua.task1.Twiteruser;
+import ucu.edu.ua.task1.MessageSender;
+import ucu.edu.ua.task1.TwiterUser;
 import ucu.edu.ua.task1.User;
 import ucu.edu.ua.task1.Twiteruseradapter;
 
@@ -18,25 +18,25 @@ public class Tests {
                             "third@gmail.com";
     private static final long TWO_HOURS_IN_MILLIS = 7200000;
 
-    private Messagesender messageSender;
+    private MessageSender messageSender;
     private User activeUser;
     private User inactiveUser;
     private User differentCountryUser;
 
     @BeforeEach
     void setUp() {
-        messageSender = new Messagesender();
+        messageSender = new MessageSender();
 
-        Facebookuser activeFacebookUser = new Facebookuser(
+        FacebookUser activeFacebookUser = new FacebookUser(
             ACTIVE_EMAIL, UKRAINE, System.currentTimeMillis());
         activeUser = new Facebookuseradapter(activeFacebookUser);
 
-        Facebookuser inactiveFacebookUser = new Facebookuser(
+        FacebookUser inactiveFacebookUser = new FacebookUser(
             INACTIVE_EMAIL, UKRAINE, 
                             System.currentTimeMillis() - TWO_HOURS_IN_MILLIS);
         inactiveUser = new Facebookuseradapter(inactiveFacebookUser);
 
-        Twiteruser differentCountryTwitterUser = new Twiteruser(
+        TwiterUser differentCountryTwitterUser = new TwiterUser(
             DIFFERENT_COUNTRY_EMAIL, FRANCE, System.currentTimeMillis());
         differentCountryUser = new Twiteruseradapter(
                                         differentCountryTwitterUser
