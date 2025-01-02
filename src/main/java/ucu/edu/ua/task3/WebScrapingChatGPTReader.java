@@ -17,7 +17,8 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class WebscrappingGPTreader {
+public class WebScrapingChatGPTReader {
+
     private static final int TOKENS = 50;
     private static final double TEMPERATURE = 0.5;
     private static final int FAIL_RESPONSE = 429;

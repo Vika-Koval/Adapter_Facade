@@ -1,6 +1,6 @@
 package ucu.edu.ua.task1;
 
-public class Messagesender {
+public class MessageSender {
 
     private static final long HOUR = 3600000;
 

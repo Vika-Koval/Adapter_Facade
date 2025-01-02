@@ -2,9 +2,9 @@ package ucu.edu.ua.task1;
 
 public class Twiteruseradapter implements User {
 
-    private final Twiteruser twiterUser;
+    private final TwiterUser twiterUser;
 
-    public Twiteruseradapter(Twiteruser twiterUser) {
+    public Twiteruseradapter(TwiterUser twiterUser) {
         this.twiterUser = twiterUser;
     }
 

@@ -1,12 +1,12 @@
 package ucu.edu.ua.task1;
 
-public class Facebookuser {
+public class FacebookUser {
 
     private final String email;
     private final String country;
     private final long activeTime;
 
-    public Facebookuser(String email, String country, long activeTime) {
+    public FacebookUser(String email, String country, long activeTime) {
         this.email = email;
         this.country = country;
         this.activeTime = activeTime;

@@ -1,13 +1,13 @@
 package ucu.edu.ua.task2;
 
-public class Authadapter {
+public class AuthAdapter {
     private final Авторизація auth;
 
-    public Authadapter() {
+    public AuthAdapter() {
         this.auth = new Авторизація();
     }
 
-    public boolean authenticate(DBadapter db) {
+    public boolean authenticate(DBAdapter db) {
         return auth.авторизуватися(db.getSrc());
     }
 

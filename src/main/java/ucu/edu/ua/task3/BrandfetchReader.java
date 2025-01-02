@@ -7,12 +7,12 @@ import java.util.Scanner;
 
 import org.json.JSONObject;
 
-public class Brandfetchreader {
+public class BrandfetchReader {
 
     private static final int FORBIDDEN_STATUS_CODE = 403;
     private static final int OK_STATUS_CODE = 200;
 
-    public Company getCompanyInfo(String website) throws IOException  {
+    public Company getCompanyInfo(String website) throws IOException {
         String apiKey = "z8/ZhU+9itoC2F9YkZ1KWbpqDYDeC8QQyO8NStxgSX4=";
         URL url = new URL("https://api.brandfetch.io/v1/company/" + website);
         HttpURLConnection connection =

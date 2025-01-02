@@ -1,12 +1,12 @@
 package ucu.edu.ua.task1;
 
-public class Twiteruser {
+public class TwiterUser {
 
     private final String email;
     private final String country;
     private final long activeTime;
 
-    public Twiteruser(String email, String country, long activeTime) {
+    public TwiterUser(String email, String country, long activeTime) {
         this.email = email;
         this.country = country;
         this.activeTime = activeTime;

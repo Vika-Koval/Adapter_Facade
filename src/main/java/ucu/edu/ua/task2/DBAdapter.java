@@ -1,9 +1,9 @@
 package ucu.edu.ua.task2;
 
-public class DBadapter {
+public class DBAdapter {
     private final Базаданих db;
 
-    public DBadapter() {
+    public DBAdapter() {
         this.db = new Базаданих();
     }
 

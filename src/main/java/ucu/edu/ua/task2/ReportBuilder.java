@@ -1,9 +1,9 @@
 package ucu.edu.ua.task2;
 
-public class Reportbuilder {
-    private final DBadapter db;
+public class ReportBuilder {
+    private final DBAdapter db;
 
-    public Reportbuilder(DBadapter db) {
+    public ReportBuilder(DBAdapter db) {
         this.db = db;
     }
 

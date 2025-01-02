@@ -2,14 +2,14 @@ package ucu.edu.ua;
 
 import java.io.IOException;
 
-import ucu.edu.ua.task1.Facebookuser;
+import ucu.edu.ua.task1.FacebookUser;
 import ucu.edu.ua.task1.Facebookuseradapter;
-import ucu.edu.ua.task1.Messagesender;
-import ucu.edu.ua.task2.Authadapter;
-import ucu.edu.ua.task2.DBadapter;
-import ucu.edu.ua.task2.Reportbuilder;
+import ucu.edu.ua.task1.MessageSender;
+import ucu.edu.ua.task2.AuthAdapter;
+import ucu.edu.ua.task2.DBAdapter;
+import ucu.edu.ua.task2.ReportBuilder;
 import ucu.edu.ua.task3.Company;
-import ucu.edu.ua.task3.Companyfacade;
+import ucu.edu.ua.task3.CompanyFacade;
 
 public class Main {
 
@@ -18,13 +18,13 @@ public class Main {
     private static final long VALID = System.currentTimeMillis() - ALMOST_NOW;
 
     public static void main(String[] args) {
-        Facebookuser facebookUser = new Facebookuser(
+        FacebookUser facebookUser = new FacebookUser(
                                     "first@gmail.com",
                                     "Ukraine",
                                     VALID
                                     );
 
-        Messagesender messageSender = new Messagesender();
+        MessageSender messageSender = new MessageSender();
 
         System.out.println(messageSender.send(
             "Hello!", new Facebookuseradapter(facebookUser), "Ukraine"
@@ -32,13 +32,13 @@ public class Main {
 
         System.out.println();
 
-        DBadapter db = new DBadapter();
-        Authadapter authAdapter = new Authadapter();
+        DBAdapter db = new DBAdapter();
+        AuthAdapter authAdapter = new AuthAdapter();
         if (authAdapter.authenticate(db)) {
-            Reportbuilder br = new Reportbuilder(db);
+            ReportBuilder br = new ReportBuilder(db);
             System.out.println(br.buildReport());
         }
-        Companyfacade facade = new Companyfacade();
+        CompanyFacade facade = new CompanyFacade();
         try {
             Company company = facade.getCompanyInfo("ucu.edu.ua");
             System.out.println();

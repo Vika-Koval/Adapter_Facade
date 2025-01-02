@@ -1,9 +1,9 @@
 package ucu.edu.ua.task1;
 
 public class Facebookuseradapter  implements User{
-    private final Facebookuser facebookUser;
+    private final FacebookUser facebookUser;
 
-    public Facebookuseradapter(Facebookuser facebookUser) {
+    public Facebookuseradapter(FacebookUser facebookUser) {
         this.facebookUser = facebookUser;
     }
 

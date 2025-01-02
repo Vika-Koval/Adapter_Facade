@@ -6,7 +6,7 @@ import java.net.HttpURLConnection;
 import java.util.Scanner;
 import org.json.JSONObject;
 
-public class PDLreader {
+public class PDLReader {
     private static final int OK_STATUS_CODE = 200;
     private static final int UNAUTHORIZED_STATUS_CODE = 401;
 
